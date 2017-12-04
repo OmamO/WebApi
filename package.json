@@ -1,0 +1,23 @@
+{
+  "name": "webapi",
+  "version": "1.0.0",
+  "description": "58160594 Sunida Cherdwongcharoensuk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmamO/WebApi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmamO/WebApi/issues"
+  },
+  "homepage": "https://github.com/OmamO/WebApi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
