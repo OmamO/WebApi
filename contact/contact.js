@@ -58,12 +58,24 @@ router.delete('/:id', (req, res) => {
         }
     }
     })
+
 router.post('/:id', (req, res) => 
 { 
     if(contacts.length)
-     {
+    {
         req.body.id = contact[contact.length-1].id + 1;
         contact.push(req.body);
     }
-})
+    })
+
+router.put('/:id', (req, res) => {
+    for(i=0 ; i < contact.length ; i++){
+        if(contacts[i].id ===  parseInt(id))
+        {
+            contact[i] = req.body
+                break;
+        
+        }
+    }
+    })   
 module.exports=router
