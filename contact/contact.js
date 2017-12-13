@@ -40,6 +40,10 @@ let contact = [
         Note: 'Like Korea'},
 ];
 
+router.get('/contact', (req, res) => {
+    res.json(contact)
+})
+
 router.get('/contract/Firstname/:Firstname',(req,res)=>{
 res.json(contact.find(contact => contact.Firstname==req.params.Firstname))
 })
