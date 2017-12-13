@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express()
 
-let contactlist = [
+let contact = [
     {id: 001, 
         Firstname: 'Chutima', 
         Lastname: 'Cherdchome', 
@@ -39,4 +39,8 @@ let contactlist = [
         URL: 'www.google.com', 
         Note: 'Like Korea'},
 ];
+
+router.get('/contract/Firstname/:Firstname',(req,res)=>{
+res.json(contact.find(contact => contact.Firstname==req.params.Firstname))
+})
 module.exports=router
