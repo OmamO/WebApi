@@ -58,5 +58,12 @@ router.delete('/:id', (req, res) => {
         }
     }
     })
-
+router.post('/:id', (req, res) => 
+{ 
+    if(contacts.length)
+     {
+        req.body.id = contact[contact.length-1].id + 1;
+        contact.push(req.body);
+    }
+})
 module.exports=router
