@@ -48,7 +48,7 @@ router.get('/contract/Firstname/:Firstname',(req,res)=>{
 res.json(contact.find(contact => contact.Firstname==req.params.Firstname))
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/contract/:id', (req, res) => {
     for(i=0 ; i < contact.length ; i++){
          if(contacts[i].id ===  parseInt(id))
         {
@@ -59,7 +59,7 @@ router.delete('/:id', (req, res) => {
     }
     })
 
-router.post('/:id', (req, res) => 
+router.post('/contract/:id', (req, res) => 
 { 
     if(contacts.length)
     {
@@ -68,7 +68,7 @@ router.post('/:id', (req, res) =>
     }
     })
 
-router.put('/:id', (req, res) => {
+router.put('/contract/:id', (req, res) => {
     for(i=0 ; i < contact.length ; i++){
         if(contacts[i].id ===  parseInt(id))
         {
