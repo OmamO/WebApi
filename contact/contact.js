@@ -44,13 +44,13 @@ router.get('/contact', (req, res) => {
     res.json(contact)
 })
 
-router.get('/contract/Firstname/:Firstname',(req,res)=>{
+router.get('/contact/Firstname/:Firstname',(req,res)=>{
 res.json(contact.find(contact => contact.Firstname==req.params.Firstname))
 })
 
-router.delete('/contract/:id', (req, res) => {
+router.delete('/contact/:id', (req, res) => {
     for(i=0 ; i < contact.length ; i++){
-         if(contacts[i].id ===  parseInt(id))
+         if(contact[i].id ===  parseInt(id))
         {
             contact.splice(i,1)
                 break;
@@ -59,18 +59,18 @@ router.delete('/contract/:id', (req, res) => {
     }
     })
 
-router.post('/contract/:id', (req, res) => 
+router.post('/contact/:id', (req, res) => 
 { 
-    if(contacts.length)
+    if(contact.length)
     {
         req.body.id = contact[contact.length-1].id + 1;
         contact.push(req.body);
     }
     })
 
-router.put('/contract/:id', (req, res) => {
+router.put('/contact/:id', (req, res) => {
     for(i=0 ; i < contact.length ; i++){
-        if(contacts[i].id ===  parseInt(id))
+        if(contact[i].id ===  parseInt(id))
         {
             contact[i] = req.body
                 break;
